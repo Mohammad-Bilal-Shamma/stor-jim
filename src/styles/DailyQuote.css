@@ -1,0 +1,114 @@
+.daily-quote-container {
+  background: linear-gradient(135deg, rgba(107, 66, 38, 0.08), rgba(232, 213, 196, 0.08));
+  padding: 2rem 0;
+  margin: 1rem 0;
+}
+
+.daily-quote-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.daily-quote-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.quote-decoration-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6rem;
+  height: 6rem;
+  background: linear-gradient(135deg, rgba(107, 66, 38, 0.1), rgba(107, 66, 38, 0.05));
+  border-bottom-left-radius: 100%;
+  z-index: 1;
+}
+
+.quote-decoration-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 6rem;
+  height: 6rem;
+  background: linear-gradient(135deg, rgba(232, 213, 196, 0.1), rgba(232, 213, 196, 0.05));
+  border-top-right-radius: 100%;
+  z-index: 1;
+}
+
+.quote-content {
+  position: relative;
+  z-index: 2;
+}
+
+.quote-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #4a5568;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.quote-text::before,
+.quote-text::after {
+  content: '"';
+  font-size: 1.5em;
+  color: rgba(107, 66, 38, 0.3);
+}
+
+.quote-source {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.quote-book {
+  font-weight: 600;
+  color: #6b4226;
+  margin-bottom: 0.25rem;
+}
+
+.quote-author {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.refresh-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background-color: rgba(107, 66, 38, 0.1);
+  color: #6b4226;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.refresh-button:hover {
+  background-color: rgba(107, 66, 38, 0.2);
+}
+
+.refresh-button i {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .daily-quote-card {
+    padding: 1.5rem;
+  }
+  
+  .quote-text {
+    font-size: 1.1rem;
+  }
+}
