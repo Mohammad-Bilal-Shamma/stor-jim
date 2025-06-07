@@ -129,10 +129,9 @@ const Navbar = () => {
             <Link to="/about" className="text-white hover:text-gray-200 transition-colors">من نحن</Link>
             <button 
               onClick={() => scrollToSection('testimonials')} 
-              className="text-white hover:text-gray-200 transition-colors"
-            >
-              آراء عملائنا
-            </button>
+              className="text-white hover:text-gray-200 transition-colors"> آراء عملائنا    </button>
+             
+        
             <a href="#footer" className="text-white hover:text-gray-200 transition-colors">تواصل معنا</a>
           </div>
           
