@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const CartContext = createContext();
 
@@ -19,25 +20,38 @@ export const CartProvider = ({ children }) => {
   });
 
   const addToCart = (item) => {
-    setCartItems((prevItems) => {
-      const existingItem = prevItems.find((i) => i.id === item.id);
-      if (existingItem) {
+    try {
+      if (!item || !item.id) {
+        throw new Error('بيانات المنتج غير صحيحة');
+      }
+
+      setCartItems((prevItems) => {
+        const existingItem = prevItems.find((i) => i.id === item.id);
+        if (existingItem) {
+          setNotification({
+            show: true,
+            message: `تمت زيادة كمية ${item.title} في السلة`,
+            item: item,
+          });
+          return prevItems.map((i) =>
+            i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
+          );
+        }
         setNotification({
           show: true,
-          message: `تمت زيادة كمية ${item.title} في السلة`,
+          message: `تمت إضافة ${item.title} إلى السلة`,
           item: item,
         });
-        return prevItems.map((i) =>
-          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
-        );
-      }
+        return [...prevItems, { ...item, quantity: 1 }];
+      });
+    } catch (error) {
+      console.error('خطأ في إضافة المنتج إلى السلة:', error);
       setNotification({
         show: true,
-        message: `تمت إضافة ${item.title} إلى السلة`,
-        item: item,
+        message: 'حدث خطأ أثناء إضافة المنتج إلى السلة',
+        item: null,
       });
-      return [...prevItems, { ...item, quantity: 1 }];
-    });
+    }
   };
 
   const removeFromCart = (itemId) => {
@@ -91,17 +105,41 @@ export const CartProvider = ({ children }) => {
     >
       {children}
       {notification.show && (
-        <div className="fixed top-5 right-5 bg-primary text-white p-4 rounded-lg shadow-lg z-50 flex items-center justify-between min-w-[300px]">
-          <div className="flex items-center">
-            <p>{notification.message}</p>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          className="fixed top-5 right-5 bg-primary text-white p-4 rounded-lg shadow-lg z-50 flex items-center justify-between min-w-[300px]"
+        >
+          <div className="flex items-center gap-2">
+            {notification.item?.image && (
+              <img
+                src={notification.item.image}
+                alt={notification.item.title}
+                className="w-10 h-10 object-cover rounded"
+              />
+            )}
+            <p className="text-sm">{notification.message}</p>
           </div>
           <button
             onClick={hideNotification}
-            className="ml-4 text-white hover:text-gray-200"
+            className="ml-4 text-white hover:text-gray-200 focus:outline-none"
           >
-            <i className="fas fa-times"></i>
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
           </button>
-        </div>
+        </motion.div>
       )}
     </CartContext.Provider>
   );

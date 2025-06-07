@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { getProduct } from '../services/api';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const ProductDetails = () => {
   const { id } = useParams();

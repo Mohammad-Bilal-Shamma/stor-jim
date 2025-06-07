@@ -13,6 +13,12 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const closeMobileMenu = () => {
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
   };
@@ -24,10 +30,10 @@ const Navbar = () => {
       if (isMobileMenuOpen) setIsMobileMenuOpen(false);
     }
   };
-  
+
   return (
     <>
-      <nav className="bg-gradient-to-r from-primary to-secondary shadow-md relative">
+      <nav className="bg-gradient-to-r from-primary to-secondary shadow-md fixed top-0 left-0 right-0 z-40">
         {/* Mobile Menu */}
         <div
           className={`lg:hidden fixed top-0 right-0 h-full w-80 bg-gradient-to-b from-primary to-secondary shadow-xl transform transition-transform duration-300 ease-in-out z-50 overflow-y-auto ${
@@ -38,7 +44,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between border-b border-white/20 pb-4">
               <span className="font-tajawal font-semibold text-xl text-white">  </span>
               <button
-                onClick={toggleMobileMenu}
+                onClick={closeMobileMenu}
                 className="text-white hover:text-gray-200 transition-colors"
                 aria-label="Close menu"
               >
@@ -57,19 +63,20 @@ const Navbar = () => {
             </div>
 
             <div className="flex flex-col space-y-4 text-right">
-              <Link to="/" className="text-white hover:text-gray-200 transition-colors text-lg py-2 border-b border-white/10" onClick={toggleMobileMenu}>الرئيسية</Link>
-              <Link to="/products" className="text-white hover:text-gray-200 transition-colors text-lg py-2 border-b border-white/10" onClick={toggleMobileMenu}>المنتجات</Link>
-              {/* <Link to="/products?tab=books" className="text-white hover:text-gray-200 transition-colors text-lg py-2 border-b border-white/10" onClick={toggleMobileMenu}>الكتب</Link> */}
-              {/* <Link to="/products?tab=dividers" className="text-white hover:text-gray-200 transition-colors text-lg py-2 border-b border-white/10" onClick={toggleMobileMenu}>فواصل الكتب</Link> */}
-              <Link to="/inquiry" className="text-white hover:text-gray-200 transition-colors text-lg py-2 border-b border-white/10" onClick={toggleMobileMenu}>استعلام عن منتج</Link>
-              <Link to="/about" className="text-white hover:text-gray-200 transition-colors text-lg py-2 border-b border-white/10" onClick={toggleMobileMenu}>من نحن</Link>
+              <Link to="/" className="text-white hover:text-gray-200 transition-colors text-lg py-2 border-b border-white/10" onClick={closeMobileMenu}>الرئيسية</Link>
+              <Link to="/products" className="text-white hover:text-gray-200 transition-colors text-lg py-2 border-b border-white/10" onClick={closeMobileMenu}>المنتجات</Link>
+              <Link to="/inquiry" className="text-white hover:text-gray-200 transition-colors text-lg py-2 border-b border-white/10" onClick={closeMobileMenu}>استعلام عن منتج</Link>
+              <Link to="/about" className="text-white hover:text-gray-200 transition-colors text-lg py-2 border-b border-white/10" onClick={closeMobileMenu}>من نحن</Link>
               <button 
-                onClick={() => scrollToSection('testimonials')} 
+                onClick={() => {
+                  scrollToSection('testimonials');
+                  closeMobileMenu();
+                }} 
                 className="text-white hover:text-gray-200 transition-colors text-lg py-2 border-b border-white/10 text-right"
               >
                 آراء عملائنا
               </button>
-              <a href="#footer" className="text-white hover:text-gray-200 transition-colors text-lg py-2 border-b border-white/10" onClick={toggleMobileMenu}>تواصل معنا</a>
+              <a href="#footer" className="text-white hover:text-gray-200 transition-colors text-lg py-2 border-b border-white/10" onClick={closeMobileMenu}>تواصل معنا</a>
             </div>
 
             <div className="pt-4">
@@ -101,23 +108,23 @@ const Navbar = () => {
         </div>
 
         {/* Overlay */}
-        <div
-          className={`fixed inset-0 bg-black transition-opacity duration-300 lg:hidden ${isMobileMenuOpen ? 'opacity-50 z-40' : 'opacity-0 -z-10'}`}
-          onClick={toggleMobileMenu}
-        />
+        {isMobileMenuOpen && (
+          <div
+            className="fixed inset-0 bg-black opacity-50 z-40 lg:hidden"
+            onClick={closeMobileMenu}
+          />
+        )}
 
         <div className="flex justify-between items-center max-w-[1203px] px-4 mx-auto">
           <div className="flex items-center p-2.5 text-white">
-          <img src={logo} alt="JIM Store" className="h-[50px] rounded-full shadow-md ml-2.5" />
-          <span className="font-tajawal font-light text-2xl text-white">متجر جيم </span>
+            <img src={logo} alt="JIM Store" className="h-[50px] rounded-full shadow-md ml-2.5" />
+            <span className="font-tajawal font-light text-2xl text-white hidden lg:inline">متجر جيم </span>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-4 rtl:space-x-reverse">
             <Link to="/" className="text-white hover:text-gray-200 transition-colors">الرئيسية</Link>
             <Link to="/products" className="text-white hover:text-gray-200 transition-colors">المنتجات</Link>
-            {/* <Link to="/products?tab=books" className="text-white hover:text-gray-200 transition-colors">الكتب</Link> */}
-            {/* <Link to="/products?tab=dividers" className="text-white hover:text-gray-200 transition-colors">فواصل الكتب</Link> */}
             <Link to="/inquiry" className="text-white hover:text-gray-200 transition-colors">استعلام عن منتج</Link>
             <Link to="/about" className="text-white hover:text-gray-200 transition-colors">من نحن</Link>
             <button 

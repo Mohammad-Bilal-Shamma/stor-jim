@@ -10,23 +10,20 @@ const Cart = ({ isOpen, onClose }) => {
   const [error, setError] = useState(null);
   const [offlineOrderSuccess, setOfflineOrderSuccess] = useState(false);
   const [networkStatus, setNetworkStatus] = useState(isOnline());
-  
-  // Setup network status monitoring
+
   useEffect(() => {
     const handleOnline = () => setNetworkStatus(true);
     const handleOffline = () => setNetworkStatus(false);
-    
+
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
-    
-    // Setup auto sync for offline orders
+
     const cleanupSync = setupAutoSync((result) => {
       if (result.success && result.details.some(r => r.status === 'fulfilled' && r.value.success)) {
-        // Show notification that orders were synced
         console.log('Orders synced successfully:', result);
       }
     });
-    
+
     return () => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
@@ -34,29 +31,22 @@ const Cart = ({ isOpen, onClose }) => {
     };
   }, []);
 
-  // Function to redirect to WhatsApp with order details
   const redirectToWhatsApp = (orderDetails) => {
-    const phoneNumber = '212723329765'; // WhatsApp number without the '+' symbol
-    
-    // Create message with order details
+    const phoneNumber = '212723329765'; // رقم الواتساب بدون +
+
     let message = 'طلب جديد:\n';
     message += `المجموع: ${orderDetails.total} $\n`;
     message += 'المنتجات:\n';
-    
+
     orderDetails.items.forEach(item => {
       const cartItem = cartItems.find(i => i.id === item.product);
       if (cartItem) {
         message += `- ${cartItem.title} (${item.quantity}) - ${cartItem.price * item.quantity} $\n`;
       }
     });
-    
-    // Encode the message for URL
+
     const encodedMessage = encodeURIComponent(message);
-    
-    // Create WhatsApp URL
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    
-    // Open WhatsApp in a new tab
     window.open(whatsappURL, '_blank');
   };
 
@@ -67,7 +57,7 @@ const Cart = ({ isOpen, onClose }) => {
 
     try {
       const orderData = {
-        user_name: 'عميل', // You might want to collect this from a form
+        user_name: 'عميل', // ممكن تغيره ليكون من نموذج
         total: getCartTotal(),
         items: cartItems.map((item) => ({
           product: item.id,
@@ -75,36 +65,25 @@ const Cart = ({ isOpen, onClose }) => {
         })),
       };
 
-      // If online, redirect to WhatsApp after creating order
       if (networkStatus) {
         const order = await createOrder(orderData);
         console.log('Order created:', order);
-        
-        // Clear cart after successful order
+
         cartItems.forEach((item) => removeFromCart(item.id));
-        
-        // Redirect to WhatsApp with order details
         redirectToWhatsApp(orderData);
-        
-        // Close the cart
         onClose();
         return;
       }
-      
-      // If offline, save order locally
+
       const order = await createOrder(orderData);
       console.log('Order created:', order);
 
-      // Handle offline order
       if (order.isOffline) {
         setOfflineOrderSuccess(true);
-        // Clear cart after successful offline order save
         cartItems.forEach((item) => removeFromCart(item.id));
-        // Don't close the cart to show the offline message
         return;
       }
 
-      // Clear cart after successful online order
       cartItems.forEach((item) => removeFromCart(item.id));
       onClose();
     } catch (err) {
@@ -124,13 +103,15 @@ const Cart = ({ isOpen, onClose }) => {
         onClick={onClose}
       />
 
-      <div className="fixed left-0 top-0 h-full w-96 bg-white shadow-xl transform transition-transform duration-300 ease-in-out overflow-y-auto">
+      <div className="fixed left-0 top-0 h-full bg-white shadow-xl transform transition-transform duration-300 ease-in-out overflow-y-auto
+        w-full sm:w-96">
         <div className="p-6">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold">عربة التسوق</h2>
             <button
               onClick={onClose}
               className="text-gray-500 hover:text-gray-700 transition-colors"
+              aria-label="إغلاق عربة التسوق"
             >
               <svg
                 className="w-6 h-6"
@@ -190,6 +171,7 @@ const Cart = ({ isOpen, onClose }) => {
                       <button
                         onClick={() => removeFromCart(item.id)}
                         className="text-red-500 hover:text-red-700 transition-colors ml-4"
+                        aria-label={`حذف ${item.title} من السلة`}
                       >
                         <i className="fas fa-trash"></i>
                       </button>
@@ -203,7 +185,7 @@ const Cart = ({ isOpen, onClose }) => {
                   <span>المجموع:</span>
                   <span>{getCartTotal()} $</span>
                 </div>
-                
+
                 {!networkStatus && (
                   <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-3 mb-4 rounded">
                     <div className="flex items-center">
@@ -212,7 +194,7 @@ const Cart = ({ isOpen, onClose }) => {
                     </div>
                   </div>
                 )}
-                
+
                 {offlineOrderSuccess && (
                   <div className="bg-green-100 border-l-4 border-green-500 text-green-700 p-3 mb-4 rounded">
                     <div className="flex items-center">

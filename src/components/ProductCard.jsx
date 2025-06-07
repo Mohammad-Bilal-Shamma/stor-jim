@@ -8,8 +8,7 @@ import './ProductCard.css';
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
-  const { _id, title, price, image, category, author, quantity, description } =
-    product;
+  const { _id, title, price, image, category, author, quantity, description } = product;
   const isAvailable = quantity > 0;
 
   return (
@@ -41,6 +40,7 @@ const ProductCard = ({ product }) => {
           />
         </motion.div>
       </Link>
+
       <div className="p-4 flex-grow flex flex-col">
         <Link to={`/product/${_id}`} className="block">
           <motion.h3
@@ -52,6 +52,7 @@ const ProductCard = ({ product }) => {
             {title}
           </motion.h3>
         </Link>
+
         <motion.p
           className="text-gray-600 mb-2 text-sm product-category"
           initial={{ opacity: 0 }}
@@ -61,6 +62,7 @@ const ProductCard = ({ product }) => {
           {category.name}
           {author && ` - ${author.name}`}
         </motion.p>
+
         {description && (
           <motion.p
             className="text-gray-500 text-sm mb-2 line-clamp-2 flex-grow product-description"
@@ -71,6 +73,7 @@ const ProductCard = ({ product }) => {
             {description}
           </motion.p>
         )}
+
         <motion.div
           className="flex justify-between items-center mb-3"
           initial={{ opacity: 0 }}
@@ -86,24 +89,31 @@ const ProductCard = ({ product }) => {
             {isAvailable ? `الكمية المتوفرة: ${quantity}` : 'غير متوفر'}
           </span>
         </motion.div>
+
         <div className="mt-auto">
           {isAvailable ? (
             <motion.button
-              onClick={() =>
-                addToCart({
-                  id: _id,
-                  image,
-                  title,
-                  author: author?.name || category.name,
-                  price,
-                })
-              }
-              className="bg-gradient-to-r from-primary to-secondary text-white py-2 px-4 rounded-lg hover:opacity-90 w-full flex items-center justify-center gap-2 product-button"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
+              type="button" // ✅ مهم جداً لمنع السلوك الافتراضي في النماذج
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation(); // ✅ يمنع فتح القائمة الجانبية
+                try {
+                  addToCart({
+                    id: _id,
+                    image,
+                    title,
+                    author: author?.name || category.name,
+                    price,
+                  });
+                } catch (error) {
+                  console.error('خطأ في إضافة المنتج إلى السلة:', error);
+                }
+              }}
+              className="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-accent transition-colors duration-300 flex items-center justify-center space-x-2 touch-manipulation"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
-              <i className="fas fa-shopping-cart"></i>
-              <span>أضف إلى السلة</span>
+              <span>إضافة إلى السلة</span>
             </motion.button>
           ) : (
             <motion.div
@@ -112,9 +122,9 @@ const ProductCard = ({ product }) => {
               className="w-full"
             >
               <Link
-                to={`/inquiry?title=${encodeURIComponent(
-                  title
-                )}&author=${encodeURIComponent(author?.name || category.name)}`}
+                to={`/inquiry?title=${encodeURIComponent(title)}&author=${encodeURIComponent(
+                  author?.name || category.name
+                )}`}
                 className="bg-gradient-to-r from-gray-500 to-gray-700 text-white py-2 px-4 rounded-lg hover:opacity-90 w-full flex items-center justify-center gap-2 product-button"
               >
                 <i className="fas fa-question-circle"></i>

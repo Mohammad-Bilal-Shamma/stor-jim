@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import { ReactTyped } from 'react-typed';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import bakImage from '../assets/Bak.jpg';
+
+const MotionLink = motion(Link);
 
 const Hero = () => {
   return (
@@ -34,7 +37,7 @@ const Hero = () => {
             متجر 
           </motion.span>
           <ReactTyped
-            strings={['جيم للكتب', 'جيم للقرطاسية', 'جيم للهدايا']}
+            strings={['جيم للكتب']}
             typeSpeed={100}
             backSpeed={50}
             loop
@@ -58,17 +61,17 @@ const Hero = () => {
           جيم ، المتجر الأول لبيع الكتب و استعارتها في مُحافظة إدلب منذ عام 2023 
           بأسعار مُناسبة و هدايا مجّانية عند الطلب
         </motion.p>
-        <motion.a 
-          href="/books" 
-          className="inline-block bg-primary text-white px-8 py-3 rounded-md hover:bg-accent transition-colors duration-300"
-          whileHover={{ scale: 1.05, backgroundColor: "#8b5a2b" }}
-          whileTap={{ scale: 0.95 }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
-        >
-          تصفح الكتب
-        </motion.a>
+        <MotionLink 
+  to="/products" 
+  className="inline-block bg-primary text-white px-8 py-3 rounded-md hover:bg-accent transition-colors duration-300"
+  whileHover={{ scale: 1.05, backgroundColor: "#8b5a2b" }}
+  whileTap={{ scale: 0.95 }}
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.8, duration: 0.5 }}
+>
+  تصفح المنتجات
+</MotionLink>
       </motion.div>
     </section>
   );

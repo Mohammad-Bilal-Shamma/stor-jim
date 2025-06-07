@@ -36,6 +36,80 @@
 
 /* Mobile styles */
 @media (max-width: 640px) {
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.75rem 1rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    min-height: 44px;
+    cursor: pointer;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
   .product-title {
     font-size: 0.875rem;
     line-height: 1.3;
@@ -58,7 +132,15 @@
   
   .product-button {
     font-size: 0.7rem;
-    padding: 0.3rem 0.6rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
   }
   
   /* Make card padding smaller on mobile */
@@ -146,4 +228,2152 @@
   .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
     margin-bottom: 0.5rem;
   }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.65rem;
+  }
+  
+  .product-price {
+    font-size: 0.75rem;
+  }
+  
+  .product-availability {
+    font-size: 0.6rem;
+  }
+  
+  .product-button {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Further reduce card padding */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.4rem !important;
+  }
+  
+  /* Make image even shorter on very small screens */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 70% !important;
+  }
+  
+  /* Hide description on very small screens */
+  .product-description {
+    display: none;
+  }
+  
+  /* Further reduce icon size */
+  .product-button i {
+    font-size: 0.65rem;
+  }
+  
+  /* Reduce button height */
+  .product-button {
+    min-height: 1.5rem;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Make product cards more compact */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .product-title {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-category,
+  .product-description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.8rem;
+  }
+  
+  .product-availability {
+    font-size: 0.65rem;
+  }
+  
+  .product-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  /* Increase touch target size */
+  .product-button.flex.items-center.justify-center {
+    min-height: 44px;
+  }
+  
+  /* Make card padding smaller on mobile */
+  .bg-white.rounded-lg.shadow-md.overflow-hidden.h-full.flex.flex-col > div.p-4 {
+    padding: 0.6rem !important;
+  }
+  
+  /* Adjust image container height for mobile */
+  .block.relative.w-full.pt-\[100\%\] {
+    padding-top: 80% !important; /* Make image shorter on mobile */
+  }
+  
+  /* Reduce icon size */
+  .product-button i {
+    font-size: 0.7rem;
+  }
+  
+  /* Reduce gap between icon and text */
+  .product-button.flex.items-center.justify-center.gap-2 {
+    gap: 0.2rem !important;
+  }
+  
+  /* Reduce margin between price/availability and button */
+  .flex.justify-between.items-center.mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 380px) {
+  .product-title {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .product-category,
+  .product-description {
+    font-size: 0.6rem; /* ← أضفنا rem */
+  } /* ← وأغلقنا البلوك */
 }
