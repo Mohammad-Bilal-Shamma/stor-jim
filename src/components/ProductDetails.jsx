@@ -140,7 +140,8 @@ const ProductDetails = () => {
                   whileTap={{ scale: 0.98 }}
                 >
                   <i className="fas fa-shopping-cart"></i>
-                  <span>أضف إلى السلة</span>
+                                <span>إضافة الى عربة التسوق</span>
+
                 </motion.button>
               ) : (
                 <motion.div

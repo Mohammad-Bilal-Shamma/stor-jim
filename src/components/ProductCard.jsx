@@ -113,7 +113,7 @@ const ProductCard = ({ product }) => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <span>إضافة إلى السلة</span>
+              <span>إضافة الى عربة التسوق</span>
             </motion.button>
           ) : (
             <motion.div
