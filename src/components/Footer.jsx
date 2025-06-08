@@ -64,7 +64,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center mt-10 pt-6 border-t border-white/20">
-          <p>© 2024 متجر جيم للكتب. جميع الحقوق محفوظة</p>
+          <p>© 2025 متجر جيم للكتب. جميع الحقوق محفوظة</p>
         </div>
       </div>
     </footer>
